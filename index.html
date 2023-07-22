@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Final Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a0c5c115e8.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="https://www.newsviewsnetwork.com/wp-content/uploads/2012-movie-collage31-scaled.jpg" class="header__bg"></img>
+    <div class="row">
+      <nav>
+        <a href="" class="nav__logo">
+          best<span class="primary">movies</span>
+        </a>
+        <div class="nav__links">
+          <div href="" class="nav__link link__hover-effect">Home</div>
+          <div href="" class="nav__link link__hover-effect">Movies</div>
+          <button href="" class="nav__link--primary" onclick="alert('This feature has not yet been implemented.')">Contact</button>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu">
+          <div class="menu__link">
+            Home
+          </div>
+          <div class="menu__link">
+            Movies
+          </div>
+          <div class="menu__link">
+            Contact
+          </div>
+        </div>
+        <button class="menu__close" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </nav>
+      <h2 class="header__title">Find your favourite <span class="primary">movies.</span></h2>
+      <form class="search__input--wrapper" onsubmit="onSubmit(event)">
+        <input type="text" class="search__input" placeholder="Search for any movie...">
+        <button class="search__input--btn">
+          <i class="fas fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+  <div class="progress">
+    <div class="progress__track"></div>
+  </div>
+  <div class="row flex-1">
+    <div class="movies__header">
+      <h2 class="movies__header--title">
+        Search results
+      </h2>
+      <div class="filter__input--wrapper">
+        <div class="filter__input--top">
+          <h3 class="filter__input--title">
+            <span class="filter__input--release">Release Date: </span>
+            <span id="year" class="primary">1962</span>
+          </h3>
+          <label class="filter__input--switch">
+            <input type="checkbox" class="filter__input--toggle" onchange="onToggle(event)">
+            <div class="filter__input--slider"></div>
+          </label>
+        </div>
+        <input type="range" class="filter__input" onchange="onFilterChange()" min="1900" max="2023">
+      </div>
+    </div>
+    <div class="movies__list">
+
+    </div>
+  </div>
+</body>
+</html>
